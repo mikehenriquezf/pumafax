@@ -6,7 +6,6 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta charset=utf-8>
         <title></title>
  
         <!--[if lt IE 9]> HTML5Shiv
