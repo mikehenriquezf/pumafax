@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -7,16 +6,22 @@
     <head>
         <meta charset="utf-8">
         <title></title>
- 
         <!--[if lt IE 9]> HTML5Shiv
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-        
- 
+        <script src="js/main.js"></script>
+        <script src="js/facebook.js"></script>
+        <link href="styles/main.css" rel="stylesheet" />
     </head>
     <body>
-        
+        <div id='wrapper'>
+
+        </div>
+
+
+
+        <div id="fb-root"></div>
     </body>
 </html>
