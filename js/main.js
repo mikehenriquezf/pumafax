@@ -36,26 +36,26 @@ $(document).ready(function () {
 
 	// NAVIGATION BEHAVIOR
 
-	$('.obj1').click(function (){
+	$('.obj1').live('click', function (){
 		$('#wrapper').html('');
 		loadNav();
 		loadParticipa();
 	});
 
-	$('.obj2').click(function (){
+	$('.obj2').live('click', function (){
 		$('#wrapper').html('');
 		loadNav();
 		loadCuenta();
 	});
 
-	$('.obj3').click(function (){
+	$('.obj3').live('click', function (){
 		$('#wrapper').html('');
 		loadNav();
 		loadReglas();
 		
 	});
 
-	$('.obj4').click(function (){
+	$('.obj4').live('click', function (){
 		$('#wrapper').html('');
 		loadNav();
 		loadCalendario();
