@@ -106,25 +106,12 @@ function validateUser(){
 				data: { user : null }
 			}).done(function(participa2){
 				$('#wrapper').css('background-image', 'url(img/main_background.jpg)');
-				loadNav();
+				$('#nav').show();
 				loadParticipa();
 			});
 	    }
 	});
 }
-
-// Funcion para cargar navegacion
-function loadNav(){
-	$.ajax({
-		type: "POST",
-		dataType: "html",
-		url: "includes/nav.php",
-		data: { user : null }
-	}).done(function(mensaje){
-		$('#wrapper').append(mensaje);
-	});
-}
-
 
 // Funcion para mostrar loadReglas
 
