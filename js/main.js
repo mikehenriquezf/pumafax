@@ -104,9 +104,10 @@ function validateUser(){
 				dataType: "html",
 				url: "includes/participa.php",
 				data: { user : null }
-			}).done(function(participa){
+			}).done(function(participa2){
+				$('#wrapper').css('background-image', 'url(img/main_background.jpg)');
 				loadNav();
-				$('#wrapper').append(participa);
+				loadParticipa();
 			});
 	    }
 	});
