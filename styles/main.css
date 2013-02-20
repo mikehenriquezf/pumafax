@@ -4,8 +4,8 @@ html, body { margin: 0px; padding: 0px; font-family: 'Fjalla One', sans-serif; }
 #landingpage { background: url('../img/landing_page_bg.jpg') no-repeat; width: 810px; height: 900px; position: absolute; }
 #btn_comenzar { width: 199px; height: 82px; margin-top: 710px; margin-left: 145px; display: block; }
 #comenzar { background: url('../img/btn_comenzar.png') no-repeat; width: 199px; height: 82px; border: none; }
-#navigation { height: 47px; }
-#mainpplate { background: url('../img/main_plate.jpg') no-repeat; width: 648px; height: 625px; margin: 155px 0px 0px 80px; }
+#nav { height: 47px; display: none; }
+#mainpplate { background: url('../img/main_plate.jpg') no-repeat; width: 648px; height: 625px; margin: 225px 0px 0px 80px; }
 #platecontainer { width: 582px; height: 280px; margin: 112px 0px 0px 35px; position: absolute; border-top: 1px solid #0d0d0c; }
 #welcomeplatecontainer { background: url('../img/barra_lineas.png') bottom center no-repeat; width: 582px; height: 280px; margin: 80px 0px 0px 35px; position: absolute; }
 #reglas { width: 556px; height: 225px; margin-top: 5px; background: #fff; border: solid 3px #be8f30; border-radius: 4px; overflow: -moz-scrollbars-vertical; overflow-y: scroll; padding: 10px; }
