@@ -19,7 +19,7 @@ html, body { margin: 0px; padding: 0px; font-family: 'Fjalla One', sans-serif; }
 #subirrecibo { margin-top: 125px; margin-left: 80px; }
 #maquinafax { background: url('../img/maquinafax.png') no-repeat; width: 260px; height: 279px; float: right; margin-top: -160px; margin-right: 30px; }
 .preview { padding:10px; }
-#preview { font-size: 25px; position: absolute; width: 300px; left: 30px; top: 190px; }
+#preview { font-size: 17px; position: absolute; width: 257px; left: 30px; top: 190px; }
 
 
 /*UPLOAD BUTTON STYLES*/
