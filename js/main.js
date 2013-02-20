@@ -1,12 +1,66 @@
 $(document).ready(function () {
 	var userStatus;
 	var fbid, firstname, lastname, birthday, email, gender;
+
+	SI.Files.stylizeAll();
 	 
 	$('#comenzar').live('click', function (){
+		$('#wrapper').html('');
+		$('#wrapper').css('background-image', 'url(img/main_background.jpg)');
+		loadNav();
+		loadWelcomePage();
+	});
+
+	$('#btncontinuar').live('click', function (){
+		$('#wrapper').html('');
+		loadNav();
+		loadReglas();
+		// alert('hola');
+	});
+
+	$('#registrar').live('click', function (){
+		$('#wrapper').html('');
+		loadNav();
+		loadParticipa();
+		// alert('hola');
+	});
+
+	// IMAGE UPLOAD
+	$('#photoimg').live('change', function() { 
+		$("#preview").html('');
+		$("#preview").html('<img src="loader.gif" alt="Uploading...."/>');
+		$("#imageform").ajaxForm({
+			target: '#preview'
+			}).submit();
+	});
+
+	// NAVIGATION BEHAVIOR
+
+	$('.obj1').click(function (){
+		$('#wrapper').html('');
+		loadNav();
+		loadParticipa();
+	});
+
+	$('.obj2').click(function (){
+		$('#wrapper').html('');
+		loadNav();
+		loadCuenta();
+	});
+
+	$('.obj3').click(function (){
+		$('#wrapper').html('');
+		loadNav();
+		loadReglas();
 		
 	});
 
-
+	$('.obj4').click(function (){
+		$('#wrapper').html('');
+		loadNav();
+		loadCalendario();
+		
+	});
 
 });
 
@@ -19,11 +73,13 @@ function init(status){
         	birthday = response.birthday;
         	email = response.email;
         	gender = response.gender;
-        	console.log(response);
         	validateUser();
     	});
 	}
 }
+
+
+// Funcion validar si un usuario es nuevo
 
 function validateUser(){
 	$.ajax({
@@ -42,7 +98,66 @@ function validateUser(){
 			});
 
 	    }else{
-
+	    	
+			$.ajax({
+				type: "POST",
+				dataType: "html",
+				url: "includes/participa.php",
+				data: { user : null }
+			}).done(function(participa){
+				loadNav();
+				$('#wrapper').append(participa);
+			});
 	    }
 	});
+}
+
+// Funcion para cargar navegacion
+function loadNav(){
+// alert('lasreglas');
+	$.ajax({
+		type: "POST",
+		dataType: "html",
+		url: "includes/nav.php",
+		data: { user : null }
+	}).done(function(mensaje){
+		$('#wrapper').append(mensaje);
+	});
+}
+
+
+// Funcion para mostrar loadReglas
+
+function loadReglas(){
+	$.ajax({
+		type: "POST",
+		dataType: "html",
+		url: "includes/reglas.php",
+		data: { user : null }
+	}).done(function(reglas){
+		$('#wrapper').append(reglas);
+	});
+}
+
+function loadWelcomePage(){
+	$.ajax({
+		type: "POST",
+		dataType: "html",
+		url: "includes/welcome.php",
+		data: { user : null }
+	}).done(function(welcome){
+		$('#wrapper').append(welcome);
+	});	
+}
+
+function loadParticipa(){
+	$.ajax({
+		type: "POST",
+		dataType: "html",
+		url: "includes/participa.php",
+		data: { user : null }
+	}).done(function(participa){
+		$('#wrapper').append(participa);
+	});	
+
 }

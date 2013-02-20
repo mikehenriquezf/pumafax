@@ -24,7 +24,16 @@
 
 	if($check_user->num_rows > 0 ){
 		
-		echo 1;
+		session_start();
+		$_SESSION['user_logged'] = array(
+			'logged'	=> true,
+			'id'		=> $fb_id,
+			'email'		=> $fb_email,
+			'fullname'	=> $fb_firstname . " " . $fb_lastname,
+		);
+		// Borrar echo 1; y poner echo 2; al acabar
+		// echo 2;
+		echo 2;
 
 	}else{
 		
@@ -32,7 +41,8 @@
 		$insert_user_query = "INSERT INTO " . DB_TABLE . " (fb_id, fb_firstname, fb_lastname, fb_birthday, fb_email, fb_gender) VALUES ('" . $fb_id . "', '" . $fb_firstname . "', '" . $fb_lastname . "', '" . $fb_birthday . "', '" . $fb_email . "', '$fb_gender')";
 		$insert_user = $mysqli->query($insert_user_query);
 		if($insert_user){
-			echo 0;
+			mkdir("../uploads/". $fb_id . "/", 0700);
+			echo 1;
 		}
 	
 	}

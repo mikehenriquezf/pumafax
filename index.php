@@ -12,16 +12,17 @@
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/si.files.js"></script>
         <script src="js/facebook.js"></script>
+        <script src="js/jquery.uploadify.min.js"></script>
+        <script src="js/jquery.form.js"></script>
         <link href="styles/main.css" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/uploadify.css">
+        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div id='wrapper'>
-
         </div>
-
-
-
         <div id="fb-root"></div>
     </body>
 </html>

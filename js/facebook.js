@@ -10,13 +10,13 @@ window.fbAsyncInit = function() {
 
             FB.getLoginStatus(function(response) {
                 if (response.status === 'connected') {
-                    console.log('Conectado');
+                    // console.log('Conectado');
                     init('logged'); 
                 } else if (response.status === 'not_authorized') {
-                    console.log('No autorizado');
+                    // console.log('No autorizado');
                     login();
                 } else {
-                    console.log('No Logeado');
+                    // console.log('No Logeado');
                     login();
                 }
             });
