@@ -114,7 +114,6 @@ function validateUser(){
 
 // Funcion para cargar navegacion
 function loadNav(){
-// alert('lasreglas');
 	$.ajax({
 		type: "POST",
 		dataType: "html",
