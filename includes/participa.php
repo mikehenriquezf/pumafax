@@ -11,7 +11,6 @@
 			</form>
 		</div>
 		<div id="preview"></div>
-		<div id="maquinafax">	
-		</div>
+		<div id="maquinafax"></div>
 	</div>
 </div>
