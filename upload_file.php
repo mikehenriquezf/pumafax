@@ -1,5 +1,4 @@
 <?php
-include('db.php');
 session_start();
 $fbId = $_SESSION['user_logged']['id'];
 $path = "uploads/" . $fbId . "/";
