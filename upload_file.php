@@ -25,7 +25,7 @@ $path = "uploads/" . $fbId . "/";
                 // mysql_query("UPDATE users SET profile_image='$actual_image_name' WHERE uid='$session_id'");
                   
                   // echo "<img src='uploads/".$fbId."/".$actual_image_name."'  class='preview'>";
-                  echo "Su recibo subio con exito!";
+                  echo "Gracias Por participar. Su recibo ha sido procesado. Si en serio enviaste un fax en el 2013, de seguro tienes hámbre.";
                 }
               else
                 echo "failed";
