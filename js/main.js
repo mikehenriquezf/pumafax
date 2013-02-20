@@ -7,22 +7,17 @@ $(document).ready(function () {
 	$('#comenzar').live('click', function (){
 		$('#wrapper').html('');
 		$('#wrapper').css('background-image', 'url(img/main_background.jpg)');
-		loadNav();
 		loadWelcomePage();
 	});
 
 	$('#btncontinuar').live('click', function (){
 		$('#wrapper').html('');
-		loadNav();
 		loadReglas();
-		// alert('hola');
 	});
 
 	$('#registrar').live('click', function (){
 		$('#wrapper').html('');
-		loadNav();
 		loadParticipa();
-		// alert('hola');
 	});
 
 	// IMAGE UPLOAD
@@ -38,26 +33,22 @@ $(document).ready(function () {
 
 	$('.obj1').live('click', function (){
 		$('#wrapper').html('');
-		loadNav();
 		loadParticipa();
 	});
 
 	$('.obj2').live('click', function (){
 		$('#wrapper').html('');
-		loadNav();
 		loadCuenta();
 	});
 
 	$('.obj3').live('click', function (){
 		$('#wrapper').html('');
-		loadNav();
 		loadReglas();
 		
 	});
 
 	$('.obj4').live('click', function (){
 		$('#wrapper').html('');
-		loadNav();
 		loadCalendario();
 		
 	});
@@ -144,7 +135,18 @@ function loadParticipa(){
 		url: "includes/participa.php",
 		data: { user : null }
 	}).done(function(participa){
+		$('#nav').show();
 		$('#wrapper').append(participa);
 	});	
+}
 
+function loadCuenta(){
+	$.ajax({
+		type: "POST",
+		dataType: "html",
+		url: "includes/micuenta.php",
+		data: { user : null }
+	}).done(function(micuenta){
+		$('#wrapper').append(micuenta);
+	});	
 }
