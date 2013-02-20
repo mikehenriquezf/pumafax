@@ -21,6 +21,14 @@
         <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     </head>
     <body>
+        <div id="nav" style="position: absolute; z-index:10;">
+            <ul id="navigation">
+                <li class="obj1"></li>
+                <li class="obj2"></li>
+                <li class="obj3"></li>
+                <li class="obj4"></li>
+            </ul>
+        </div>
         <div id='wrapper'>
         </div>
         <div id="fb-root"></div>
